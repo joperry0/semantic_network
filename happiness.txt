@@ -1,0 +1,34 @@
+(fact (is-a john1  person))
+(fact (is-a  creative trait))
+(fact (is-a  project trait ))
+(fact (is-a smart trait))
+(fact (is-a mac trait))
+(fact (is-a party trait))
+(fact (is-a homework trait))
+(fact (is-a success trait))
+(fact (is-a happy trait))
+(fact (connected creative john1))
+(fact (connected smart john1))
+(fact (connected  creative project))
+(fact (connected  creative mac))
+(fact (connected  smart project))
+(fact (connected smart mac))
+(fact (connected smart homework))
+(fact (connected party homework))
+(fact (connected party happy))
+(fact (connected project success))
+(fact (connected mac happy))
+(fact (connected homework success))
+(fact (connected success happy))
+(query (connected creative project))
+(query (connected creative party))
+(query value (is-a  value person))
+(query value (and (is-a  value trait) (connected value homework)  (connected value john2)))
+(query value (and (is-a value trait) (connected value john1)))
+
+Given this file as input, the program should produce the following output:
+Yes
+No
+John1
+None
+creative
