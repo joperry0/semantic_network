@@ -206,7 +206,7 @@ class Knowledge:
 		flag = 0
 		# Nested query logic
 		if operats.search(str(query)) is not None:
-			for qu in query[1:]: # logic here does not work entirely correctly
+			for qu in query[1:]:
 				if type(qu).__name__ == 'ParseResults':
 					if query[0] == 'and': 
 						if flag == 0:
